@@ -1,28 +1,27 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
-import { setUserPhoto } from "../../../../features/auth/authSlice";
-import { icons } from "../../../../services/utils/icons";
+import axios from 'axios';
+import { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
+import { setUserPhoto } from '../../../../features/auth/authSlice';
+import { icons } from '../../../../services/utils/icons';
 
 function SidebarHeader() {
   const { idToken, userPhoto } = useSelector((state) => state.auth);
   const [image, setImage] = useState(userPhoto);
   const dispatch = useDispatch();
 
-  let defaultPhoto =
-    "https://firebasestorage.googleapis.com/v0/b/foodieland-3b1ed.appspot.com/o/panel%2Fblue-avatar.png?alt=media&token=e6785fc7-5ef7-432f-a761-edb9db90437d";
+  let defaultPhoto = './images/panel/blue-avatar.png';
 
   useEffect(() => {
     async function getUserData() {
       const { data } = await axios.post(
-        "https://identitytoolkit.googleapis.com/v1/accounts:lookup?key=AIzaSyDoO53wWZ6YAcN8zZ4aQ_dh0LmRj6IDAoc",
+        'https://identitytoolkit.googleapis.com/v1/accounts:lookup?key=AIzaSyDoO53wWZ6YAcN8zZ4aQ_dh0LmRj6IDAoc',
         JSON.stringify({ idToken }),
         {
           headers: {
-            "Content-Type": "application/json",
+            'Content-Type': 'application/json',
           },
-        }
+        },
       );
       const { photoUrl } = data.users[0];
       dispatch(setUserPhoto(photoUrl));

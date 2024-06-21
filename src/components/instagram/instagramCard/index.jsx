@@ -1,5 +1,5 @@
-import React from "react";
-import { icons } from "../../../services/utils/icons";
+import React from 'react';
+import { icons } from '../../../services/utils/icons';
 
 function InstagramCard({ imageUrl, caption, date }) {
   const instagramLike = icons.instagramLike();
@@ -12,10 +12,7 @@ function InstagramCard({ imageUrl, caption, date }) {
       <div className="flex justify-between items-center py-1 px-2">
         <div className="flex ">
           <div>
-            <img
-              src="https://firebasestorage.googleapis.com/v0/b/foodieland-3b1ed.appspot.com/o/instagram%2Finstagram-img.png?alt=media&token=5a50cb2e-1acb-4560-9f96-ec4e32e5b5f7"
-              alt="instagram-profile"
-            />
+            <img src="./images/instagram-img.png" alt="instagram-profile" />
           </div>
           <div className="flex flex-col ml-2">
             <span className=" font-semibold text-3xs sm:text-2xs">

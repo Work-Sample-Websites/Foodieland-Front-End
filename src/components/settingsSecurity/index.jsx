@@ -1,55 +1,55 @@
-import axios from "axios";
-import { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { setUserPassword } from "../../features/auth/authSlice";
-import { icons } from "../../services/utils/icons";
-import SaveButtons from "../settingsAccountForm/saveButtons";
-import TwoFactorAuth from "./twoFactorAuth";
+import axios from 'axios';
+import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { setUserPassword } from '../../features/auth/authSlice';
+import { icons } from '../../services/utils/icons';
+import SaveButtons from '../settingsAccountForm/saveButtons';
+import TwoFactorAuth from './twoFactorAuth';
 
 function SettingsSecurity() {
   const { idToken, userPassword } = useSelector((state) => state.auth);
-  const [currentPassword, setCurrentPassword] = useState("");
+  const [currentPassword, setCurrentPassword] = useState('');
   const [currentPasswordIsValid, setCurrentPasswordIsValid] = useState(true);
-  const [newPassword, setNewPassword] = useState("");
+  const [newPassword, setNewPassword] = useState('');
   const [newPasswordTouched, setNewPasswordTouched] = useState(false);
-  const [confirmPassword, setConfirmPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState('');
   const [confirmPasswordTouched, setConfirmPasswordTouched] = useState(false);
-  const [currentInputType, setCurrentInputType] = useState("password");
-  const [newInputType, setNewInputType] = useState("password");
-  const [confirmInputType, setConfirmInputType] = useState("password");
+  const [currentInputType, setCurrentInputType] = useState('password');
+  const [newInputType, setNewInputType] = useState('password');
+  const [confirmInputType, setConfirmInputType] = useState('password');
   const [isLoading, setIsLoading] = useState(false);
   const dispatch = useDispatch();
 
   let confirmPasswordIsValid = newPassword === confirmPassword;
 
-  let newPasswordError = ["password should contain at least"];
+  let newPasswordError = ['password should contain at least'];
   let newPasswordIsValid = true;
 
   if (!/[a-zA-Z0-9]{6,}/.test(newPassword)) {
-    newPasswordError.push(" 6 characters");
+    newPasswordError.push(' 6 characters');
     newPasswordIsValid = false;
   }
   if (!/(?=.*[A-Z])/.test(newPassword)) {
-    newPasswordError.push(" one uppercase");
+    newPasswordError.push(' one uppercase');
     newPasswordIsValid = false;
   }
   if (!/(?=.*\d)/.test(newPassword)) {
-    newPasswordError.push(" one digit");
+    newPasswordError.push(' one digit');
     newPasswordIsValid = false;
   }
 
   function showPasswordHandler(type) {
-    if (type === "current") {
+    if (type === 'current') {
       setCurrentInputType(
-        currentInputType === "password" ? "text" : "password"
+        currentInputType === 'password' ? 'text' : 'password',
       );
     }
-    if (type === "new") {
-      setNewInputType(newInputType === "password" ? "text" : "password");
+    if (type === 'new') {
+      setNewInputType(newInputType === 'password' ? 'text' : 'password');
     }
-    if (type === "confirm") {
+    if (type === 'confirm') {
       setConfirmInputType(
-        confirmInputType === "password" ? "text" : "password"
+        confirmInputType === 'password' ? 'text' : 'password',
       );
     }
   }
@@ -65,20 +65,19 @@ function SettingsSecurity() {
     const resetInputs = () => {
       setConfirmPasswordTouched(false);
       setNewPasswordTouched(false);
-      setCurrentPassword("");
-      setNewPassword("");
-      setConfirmPassword("");
+      setCurrentPassword('');
+      setNewPassword('');
+      setConfirmPassword('');
     };
     try {
       const { data } = await axios.post(
-        "https://identitytoolkit.googleapis.com/v1/accounts:update?key=AIzaSyDoO53wWZ6YAcN8zZ4aQ_dh0LmRj6IDAoc",
-        JSON.stringify({ idToken, password: newPassword })
+        'https://identitytoolkit.googleapis.com/v1/accounts:update?key=AIzaSyDoO53wWZ6YAcN8zZ4aQ_dh0LmRj6IDAoc',
+        JSON.stringify({ idToken, password: newPassword }),
       );
       dispatch(setUserPassword({ userPassword: newPassword }));
       setIsLoading(false);
       resetInputs();
     } catch (error) {
-      console.log(error);
       setIsLoading(false);
     }
   }
@@ -98,7 +97,7 @@ function SettingsSecurity() {
               />
               <span
                 className="absolute right-3 top-4 cursor-pointer"
-                onClick={() => showPasswordHandler("current")}
+                onClick={() => showPasswordHandler('current')}
               >
                 {icons.eye()}
               </span>
@@ -119,13 +118,13 @@ function SettingsSecurity() {
               />
               <span
                 className="absolute right-3 top-4 cursor-pointer"
-                onClick={() => showPasswordHandler("new")}
+                onClick={() => showPasswordHandler('new')}
               >
                 {icons.eye()}
               </span>
               {!newPasswordIsValid && newPasswordTouched && (
                 <p className="text-red-600 font-semibold text-sm mt-1">
-                  {newPasswordError.join(" ")}
+                  {newPasswordError.join(' ')}
                 </p>
               )}
             </div>
@@ -140,7 +139,7 @@ function SettingsSecurity() {
               />
               <span
                 className="absolute right-3 top-4 cursor-pointer"
-                onClick={() => showPasswordHandler("confirm")}
+                onClick={() => showPasswordHandler('confirm')}
               >
                 {icons.eye()}
               </span>
@@ -153,7 +152,7 @@ function SettingsSecurity() {
           </div>
           <div className="hidden lg:block lg:basis-1/2">
             <img
-              src="https://firebasestorage.googleapis.com/v0/b/foodieland-3b1ed.appspot.com/o/panel%2Fpose_m1.png?alt=media&token=b18c687e-3369-4aca-ac1d-b6184c2eecf6"
+              src="./images/panel/pose_m1.png"
               alt="pose"
               className="mx-auto w-[140px]"
             />

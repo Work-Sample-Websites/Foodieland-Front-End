@@ -67,7 +67,6 @@ function RegisterBox() {
       navigate("/panel/posts", { replace: true });
     } catch (error) {
       setIsLoading(false);
-      console.log(error);
     }
   };
 

@@ -1,12 +1,12 @@
-import React, { useState } from "react";
-import Pagination from "./pagination";
-import SubscribeCard from "../subscribeCard";
-import OtherRecipes from "../ingredients/components/otherRecipes";
-import BlogHeader from "./components/blogHeader";
-import BlogCard from "./components/blogCard";
-import BlogSearchBox from "./components/blogSearchBox";
-import { articleData, recipeData } from "../../services/utils/data";
-import { useSelector } from "react-redux";
+import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
+import { articleData, recipeData } from '../../services/utils/data';
+import OtherRecipes from '../ingredients/components/otherRecipes';
+import SubscribeCard from '../subscribeCard';
+import BlogCard from './components/blogCard';
+import BlogHeader from './components/blogHeader';
+import BlogSearchBox from './components/blogSearchBox';
+import Pagination from './pagination';
 
 const Blog = () => {
   const { articles } = useSelector((state) => state.articles);
@@ -31,12 +31,10 @@ const Blog = () => {
   return (
     <>
       <BlogHeader />
-
       <BlogSearchBox
         searchHandler={searchHandler}
-        placeholder={"search for recipes"}
+        placeholder={'search for recipes'}
       />
-
       <div className="">
         <section className="w-11/12 xl:w-full mx-auto flex flex-wrap lg:flex-nowrap gap-10 font-inter my-10 lg:my-20  ">
           <div className=" basis-[100%] lg:basis-[66%] relative ">
@@ -61,10 +59,9 @@ const Blog = () => {
                     author={author}
                     profile={profile}
                   />
-                )
+                ),
               )}
             </div>
-
             <div className="w-auto">
               <Pagination
                 postPerPage={PostPerPage}
@@ -75,14 +72,12 @@ const Blog = () => {
               />
             </div>
           </div>
-
           <OtherRecipes
             RecipeData={recipeData}
             number={3}
-            title={"Tasty Recipes"}
+            title={'Tasty Recipes'}
           />
         </section>
-
         <SubscribeCard />
       </div>
     </>

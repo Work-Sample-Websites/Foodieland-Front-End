@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { icons } from "../../../services/utils/icons";
+import { useState } from 'react';
+import { icons } from '../../../services/utils/icons';
 
 function FormPasswords({
   setCurrentPassword,
@@ -7,22 +7,22 @@ function FormPasswords({
   setConfirmPassword,
   confirmPasswordIsValid,
 }) {
-  const [currentInputType, setCurrentInputType] = useState("password");
-  const [newInputType, setNewInputType] = useState("password");
+  const [currentInputType, setCurrentInputType] = useState('password');
+  const [newInputType, setNewInputType] = useState('password');
 
-  const [confirmInputType, setConfirmInputType] = useState("password");
+  const [confirmInputType, setConfirmInputType] = useState('password');
   function showPasswordHandler(type) {
-    if (type === "current") {
+    if (type === 'current') {
       setCurrentInputType(
-        currentInputType === "password" ? "text" : "password"
+        currentInputType === 'password' ? 'text' : 'password',
       );
     }
-    if (type === "new") {
-      setNewInputType(newInputType === "password" ? "text" : "password");
+    if (type === 'new') {
+      setNewInputType(newInputType === 'password' ? 'text' : 'password');
     }
-    if (type === "confirm") {
+    if (type === 'confirm') {
       setConfirmInputType(
-        confirmInputType === "password" ? "text" : "password"
+        confirmInputType === 'password' ? 'text' : 'password',
       );
     }
   }
@@ -38,7 +38,7 @@ function FormPasswords({
           />
           <span
             className="absolute right-3 top-4 cursor-pointer"
-            onClick={() => showPasswordHandler("current")}
+            onClick={() => showPasswordHandler('current')}
           >
             {icons.eye()}
           </span>
@@ -52,7 +52,7 @@ function FormPasswords({
           />
           <span
             className="absolute right-3 top-4 cursor-pointer"
-            onClick={() => showPasswordHandler("new")}
+            onClick={() => showPasswordHandler('new')}
           >
             {icons.eye()}
           </span>
@@ -66,7 +66,7 @@ function FormPasswords({
           />
           <span
             className="absolute right-3 top-4 cursor-pointer"
-            onClick={() => showPasswordHandler("confirm")}
+            onClick={() => showPasswordHandler('confirm')}
           >
             {icons.eye()}
           </span>
@@ -77,7 +77,7 @@ function FormPasswords({
       </div>
       <div className="hidden lg:block lg:basis-1/2">
         <img
-          src="https://firebasestorage.googleapis.com/v0/b/foodieland-3b1ed.appspot.com/o/panel%2Fpose_m1.png?alt=media&token=b18c687e-3369-4aca-ac1d-b6184c2eecf6"
+          src="./images/panel/pose_m1.png"
           alt="pose"
           className="mx-auto w-[140px]"
         />

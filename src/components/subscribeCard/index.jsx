@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 const SubscribeCard = () => {
   return (
@@ -12,7 +12,7 @@ const SubscribeCard = () => {
         <div className="w-11/12 md:w-[620px]  text-center font-normal text-secondary text-sm md:text-base">
           <p className="sm:leading-[28px]">
             Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqut enim ad minim{" "}
+            tempor incididunt ut labore et dolore magna aliqut enim ad minim{' '}
           </p>
         </div>
       </div>
@@ -25,20 +25,20 @@ const SubscribeCard = () => {
             className="placeholder:text-sm md:placeholder:text-base w-full h-full pl-4 sm:pl-8 py-4 sm:py-8 rounded-2xl text-[17px] tracking-[-0.02em] leading-[17px] text-[rgba(0,0,0,0.4)]"
           />
           <button className="w-28 sm:w-40 h-[45px] sm:h-[60px] rounded-2xl bg-black text-white absolute top-auto right-0 my-1 sm:my-2.5 mr-2.5 hover:scale-105 hover:font-semibold transition-all">
-            {" "}
+            {' '}
             subscribe
           </button>
         </form>
         <div className="absolute bottom-0 -left-16 lg:left-0 ">
           <img
-            src="https://firebasestorage.googleapis.com/v0/b/foodieland-3b1ed.appspot.com/o/others%2Fkisspng-salad-salad-fresh-food-healthylife-vegetables-vegetarian-5d42e3a7cb8543%201.png?alt=media&token=97d88f43-d0fc-4e4a-b73d-405d6e95cbf0"
+            src="./images/kisspng-salad-salad-fresh-food.png"
             alt="salad"
             className="hidden md:block md:w-3/5 lg:w-4/5 xl:w-full"
           />
         </div>
         <div className="absolute bottom-0 right-0">
           <img
-            src="https://firebasestorage.googleapis.com/v0/b/foodieland-3b1ed.appspot.com/o/others%2FPhoto-plate.png?alt=media&token=bf5388cb-6505-4804-9552-881847b6bae7"
+            src="./images/Photo-plate.png"
             alt="plate"
             className="hidden md:block  ml-auto md:w-2/3 lg:w-4/5 xl:w-full"
           />

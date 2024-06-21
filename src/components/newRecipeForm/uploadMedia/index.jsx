@@ -1,26 +1,24 @@
-import { useRef } from "react";
-import { storage } from "../../../services/firebase";
-import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
-import { v4 as uuidv4 } from "uuid";
+import { useRef } from 'react';
+// import { storage } from "../../../services/firebase";
 
 function UploadMedia({ setUploadPoster, setUploadVideo }) {
   const uploadPosterRef = useRef();
   const uploadVideoRef = useRef();
 
   async function uploadPosterHandler(event) {
-    const poster = event.target.files[0];
-    const posterRef = ref(storage, `recipes/${poster.name + uuidv4()}`);
-    const res = await uploadBytes(posterRef, poster);
-    const url = await getDownloadURL(res.ref);
-    setUploadPoster(url);
+    // const poster = event.target.files[0];
+    // const posterRef = ref(storage, `recipes/${poster.name + uuidv4()}`);
+    // const res = await uploadBytes(posterRef, poster);
+    // const url = await getDownloadURL(res.ref);
+    // setUploadPoster(url);
   }
 
   async function uploadVideoHandler(event) {
-    const video = event.target.files[0];
-    const videoRef = ref(storage, `videos/${video.name + uuidv4()}`);
-    const res = await uploadBytes(videoRef, video);
-    const url = await getDownloadURL(res.ref);
-    setUploadVideo(url);
+    // const video = event.target.files[0];
+    // const videoRef = ref(storage, `videos/${video.name + uuidv4()}`);
+    // const res = await uploadBytes(videoRef, video);
+    // const url = await getDownloadURL(res.ref);
+    // setUploadVideo(url);
   }
 
   return (

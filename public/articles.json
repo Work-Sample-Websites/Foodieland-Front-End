@@ -1,0 +1,137 @@
+[
+  {
+    "author": "Priyaja Bakshi",
+    "created_date": "Thu May 25 2022 14:23:16 GMT+0430",
+    "description": "We have created a list of easy sandwich recipes you can make for breakfast. But the highlight of these recipes is that they come with a desi twist ",
+    "id": "1",
+    "img": "./images/articles/article-1.png",
+    "profile": "./images/author/priyaja-bakshi.png",
+    "title": "7 Desi Sandwich Recipes For An Easy And Masaledaar Breakfast "
+  },
+  {
+    "author": "Gauri Rohatgi",
+    "created_date": "Thu jun 10 2022 14:23:16 GMT+0430",
+    "description": "We bring you a list of 5 protein-rich dinner recipes that you can rustle up in just 20 minutes.",
+    "id": "2",
+    "img": "./images/articles/article-2.png",
+    "profile": "./images/author/gauri-rohtagi.png",
+    "title": "High Protein: 5 Protein-Rich Dinner Recipes"
+  },
+  {
+    "author": "Gauri Rohatgi",
+    "created_date": "Thu feb 29 2022 14:23:16 GMT+0430",
+    "description": "Here we bring you a list of pickle recipes that you can make in a matter of minutes. They need just 15-20 minutes to get ready. So, what are you waiting for? Let's get started with the list ",
+    "id": "3",
+    "img": "./images/articles/article-3.png",
+    "profile": "./images/author/gauri-rohtagi.png",
+    "title": "Mango Pickle, Onion Pickle And More: 5 Instant Pickle Recipes "
+  },
+  {
+    "author": "Priyaja Bakshi",
+    "created_date": "Thu oct 05 2022 14:23:16 GMT+0430",
+    "description": "Looking for unique party snack recipes? We have found five egg-based delicious snacks that have an Indian/desi tadka",
+    "id": "4",
+    "img": "./images/articles/article-4.png",
+    "profile": "./images/author/priyaja-bakshi.png",
+    "title": "Indian Cooking Tips: 5 Desi Egg-Based Snack Recipes"
+  },
+  {
+    "author": "Priyaja Bakshi",
+    "created_date": "Thu May 25 2022 14:23:16 GMT+0430",
+    "description": "Struggling to lose those extra kilos? We have some amazing recipes for you. These eggs salad recipes are not only healthy but also delicious!",
+    "id": "5",
+    "img": "./images/articles/article-5.png",
+    "profile": "./images/author/priyaja-bakshi.png",
+    "title": "Weight Loss: 5 Delicious Low Cal Egg Salad Recipes"
+  },
+  {
+    "author": "Pragya Subedy",
+    "created_date": "Thu jul 25 2022 14:23:16 GMT+0430",
+    "description": "Lunchbox Recipes: With colleges and offices opening up rapidly, you might be in the search of delicious and interesting lunch box ideas. Here are 5 easy, healthy, and quick recipes that you can pack in the coming days.",
+    "id": "6",
+    "img": "./images/articles/article-6.png",
+    "profile": "./images/author/pragya-subedy.png",
+    "title": "Healthy Lunchbox Recipes: Delicious Dishes  "
+  },
+  {
+    "author": "Somdatta Saha",
+    "created_date": "Thu May 25 2022 14:23:16 GMT+0430",
+    "description": "We found a super easy chocolate sauce recipe that is not only fuss-free but also takes just five minutes for preparation.   ",
+    "id": "7",
+    "img": "./images/articles/article-7.png",
+    "profile": "./images/author/somdatta-saha.png",
+    "title": "Watch: How To Make Chocolate Sauce In 5 Mins "
+  },
+  {
+    "author": "Somdatta Saha",
+    "created_date": "Thu may 21 2022 14:23:16 GMT+0430",
+    "description": "This egg-potato salad recipe is light, wholesome and takes less than 30 minutes for preparation. Find the recipe inside.",
+    "id": "8",
+    "img": "./images/articles/article-8.png",
+    "profile": "./images/author/somdatta-saha.png",
+    "title": "How To Make Egg And Potato Salad For A Quick Meal  "
+  },
+  {
+    "author": "Pragya Subedy",
+    "created_date": "Thu feb 11 2022 14:23:16 GMT+0430",
+    "description": "Ran out of breadcrumbs? Use these 5 food items which work the same for coating fried foods and snacks.",
+    "id": "9",
+    "img": "./images/articles/article-9.png",
+    "profile": "./images/author/pragya-subedy.png",
+    "title": "5 Things You Can Use Instead Of Breadcrumbs To Coat Fried Foods"
+  },
+  {
+    "author": "Gauri Rohatgi",
+    "created_date": "Thu May 25 2022 14:23:16 GMT+0430",
+    "description": "If you love garlic bread as much as we do, here we have something special for you. We have found one recipe for making restaurant-style garlic bread at home and that too without an oven.",
+    "id": "10",
+    "img": "./images/articles/article-10.png",
+    "profile": "./images/author/gauri-rohtagi.png",
+    "title": "How To Make Garlic Bread Without Using An Oven "
+  },
+  {
+    "author": "Gauri Rohatgi",
+    "created_date": "Thu jun 26 2022 14:23:16 GMT+0430",
+    "description": "If you are a true foodie and love to try and experiment with food, you are at the right place. Here we bring you a list of 7 Afghani recipes you can try making at home.",
+    "id": "11",
+    "img": "./images/articles/article-11.png",
+    "profile": "./images/author/gauri-rohtagi.png",
+    "title": "Afghani Tikka, Pulao And More: 7 Afghani Recipes  "
+  },
+  {
+    "author": "Priyaja Bakshi",
+    "created_date": "Thu nov 25 2022 14:23:16 GMT+0430",
+    "description": "We have found the recipes for crispy non-vegetarian snacks that shall soothe our rainy-day desires for something crunchy, meaty and delicious. ",
+    "id": "12",
+    "img": "./images/articles/article-12.png",
+    "profile": "./images/author/priyaja-bakshi.png",
+    "title": "5 Crispy Non-Vegetarian Snacks To Indulge On A Rainy Day"
+  },
+  {
+    "author": "Somdatta Saha",
+    "created_date": "Thu May 25 2022 14:23:16 GMT+0430",
+    "description": "The onion chutney is all things flavourful and has a taste that you have never had before. It is comforting, spicy, and makes for a perfect side dish ",
+    "id": "13",
+    "img": "./images/articles/article-13.png",
+    "profile": "./images/author/somdatta-saha.png",
+    "title": "A Lip-Smacking Recipe That Will Fire Up Your Meals"
+  },
+  {
+    "author": "Pragya Subedy",
+    "created_date": "Thu May 25 2022 14:23:16 GMT+0430",
+    "description": "Made with just about 2-3 major ingredients, the mango sandwich is another fun way to include mango in your diet. Use chilled ingredients for the best experience!",
+    "id": "14",
+    "img": "./images/articles/article-14.png",
+    "profile": "./images/author/pragya-subedy.png",
+    "title": "Summer Special: Mango Sandwich Is The Recent Trend"
+  },
+  {
+    "author": "Pragya Subedy",
+    "description": "aaaaaaaaaaaa",
+    "id": "6a76aacf-ff31-4fa5-a9df-2149cbc0d5e4",
+    "img": "./images/articles/Screenshot%202021-12-26%20111033.pnga548f0cb-6a84-457d-b659-7b2dc6851ef3",
+    "profile": "./images/author/pragya-subedy.png",
+    "title": "test article",
+    "uploadDate": "2022-05-28T12:36:41.455Z"
+  }
+]

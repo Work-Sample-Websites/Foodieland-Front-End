@@ -1,6 +1,6 @@
-import ChefCard from "./components/chefCard";
-import React from "react";
-import { chefsData } from "../../services/utils/data";
+import React from 'react';
+import { chefsData } from '../../services/utils/data';
+import ChefCard from './components/chefCard';
 
 function Chefs() {
   return (

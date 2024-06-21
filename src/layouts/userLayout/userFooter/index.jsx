@@ -56,8 +56,8 @@ const UserFooter = () => {
       </div>
       <div className="flex md:flex-row flex-col md:mb-[10px] h-[150px] justify-around  items-center border-t-[1px] border-gray-300">
         <p className="flex items-center justify-center font-eudoxus font-normal lg:mb-0 sm:mx-auto text-[0.8rem] sm:text-lg">
-          © 2020 Flowbase. Powered by{" "}
-          <span className="text-red-300">Webflow</span>{" "}
+          © 2020 Flowbase. Powered by {"  "}
+          <span className="text-red-300">Foodieland</span>{"  "}
         </p>
         <div className="flex items-center justify-center md:flex-row text-[19.36px] sm:mb-[0px] mb-[40px]">
           <span className="flex justify-center header-icon cursor-pointer">

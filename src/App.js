@@ -1,35 +1,35 @@
 import React, { useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
 import {
   AboutUs,
   Blog,
+  BlogPost,
   Contact,
   Home,
-  Recipes,
   NotFound,
-  BlogPost,
   Recipe,
+  Recipes,
 } from "./routes/user";
 
 import {
-  Posts,
-  NewPost,
-  Notice,
-  Settings,
-  Statistic,
   Contacts,
   Login,
+  NewPost,
+  Notice,
+  Posts,
   Register,
+  Settings,
+  Statistic,
 } from "./routes/panel";
 
-import { LoginBox, ForgotPassword, ResetPassword } from "./routes/components";
-import { useDispatch, useSelector } from "react-redux";
-import { checkIsLogged } from "./features/auth/auth-actions";
-import PrivateRoute from "./routes/privateRoute";
-import { fetchRecipes } from "./features/recipe/recipeSlice";
 import axios from "axios";
+import { useDispatch, useSelector } from "react-redux";
 import { fetchArticles } from "./features/article/articleSlice";
+import { checkIsLogged } from "./features/auth/auth-actions";
+import { fetchRecipes } from "./features/recipe/recipeSlice";
+import { ForgotPassword, LoginBox, ResetPassword } from "./routes/components";
+import PrivateRoute from "./routes/privateRoute";
 
 function App() {
   const { idToken, expirationTime, isLogged } = useSelector(
@@ -45,16 +45,15 @@ function App() {
     async function fetchData() {
       try {
         const recipeResponse = await axios.get(
-          "https://foodieland-3b1ed-default-rtdb.firebaseio.com/recipes.json"
+          "http://localhost:3001/recipes.json"
         );
         const articleResponse = await axios.get(
-          "https://foodieland-3b1ed-default-rtdb.firebaseio.com/articles.json"
+          " "
         );
 
         dispatch(fetchRecipes(recipeResponse.data));
         dispatch(fetchArticles(articleResponse.data));
       } catch (error) {
-        console.log(error);
       }
     }
     fetchData();

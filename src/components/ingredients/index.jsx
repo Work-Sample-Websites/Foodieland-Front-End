@@ -1,9 +1,9 @@
-import React from "react";
-import { useSelector } from "react-redux";
-import { ingredientsData } from "../../services/utils/data";
-import IngredientCard from "./components/ingredientCard";
-import OtherRecipes from "./components/otherRecipes";
-import "./ingredients.css";
+import React from 'react';
+import { useSelector } from 'react-redux';
+import { ingredientsData } from '../../services/utils/data';
+import IngredientCard from './components/ingredientCard';
+import OtherRecipes from './components/otherRecipes';
+import './ingredients.css';
 
 function Ingredients() {
   const recipes = useSelector((state) => state.recipes.recipes);
@@ -31,7 +31,7 @@ function Ingredients() {
             ))}
           </div>
         </div>
-        <OtherRecipes RecipeData={recipes} number={3} title={"Other Recipes"} />
+        <OtherRecipes RecipeData={recipes} number={3} title={'Other Recipes'} />
       </div>
     </section>
   );

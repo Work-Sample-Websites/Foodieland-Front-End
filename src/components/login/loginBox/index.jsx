@@ -26,11 +26,9 @@ function LoginBox() {
         "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyDoO53wWZ6YAcN8zZ4aQ_dh0LmRj6IDAoc",
         JSON.stringify(user)
       );
-      console.log(data);
 
       let expirationTime = new Date().getTime() + 3600000;
 
-      console.log(enteredPassword);
       dispatch(
         login({
           token: data.idToken,
@@ -44,7 +42,6 @@ function LoginBox() {
     } catch (error) {
       setIsLoading(false);
       setShowError(true);
-      console.log(error);
     }
   };
 

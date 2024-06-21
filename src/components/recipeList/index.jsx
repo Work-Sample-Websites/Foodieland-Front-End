@@ -1,13 +1,13 @@
-import { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { useLocation } from "react-router-dom";
-import { resetCategories } from "../../features/recipe/recipeSlice";
-import { categoriesData } from "../../services/utils/data";
-import BlogSearchBox from "../blog/components/blogSearchBox";
-import Pagination from "../blog/pagination";
-import MoreRecipeCard from "../moreRecipe/components/moreRecipeCard";
-import CategoryFilter from "./categoryFilter";
-import "./recipe-list.css";
+import { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { useLocation } from 'react-router-dom';
+import { resetCategories } from '../../features/recipe/recipeSlice';
+import { categoriesData } from '../../services/utils/data';
+import BlogSearchBox from '../blog/components/blogSearchBox';
+import Pagination from '../blog/pagination';
+import MoreRecipeCard from '../moreRecipe/components/moreRecipeCard';
+import CategoryFilter from './categoryFilter';
+import './recipe-list.css';
 
 function RecipeList() {
   const recipesList = useSelector((state) => state.recipes.recipes);
@@ -49,17 +49,14 @@ function RecipeList() {
     let filteredRecipes = [];
     for (let cat of categories) {
       filteredRecipes.push(
-        ...recipesList.filter((recipe) => recipe.category === cat)
+        ...recipesList.filter((recipe) => recipe.category === cat),
       );
     }
 
     if (filteredRecipes.length === 0) {
       filteredRecipes = [...recipesList];
     }
-
-    console.log(categoryChecked);
     setCategoryChecked((prevCat) => ({ ...prevCat, [name]: !prevCat[name] }));
-    console.log(categoryChecked);
     setSelectedCategories(categories);
     setRecipes(filteredRecipes);
   };
@@ -67,7 +64,7 @@ function RecipeList() {
   useEffect(() => {
     const update = () => {
       const params = new URLSearchParams(location.search);
-      const categoryId = params.get("category");
+      const categoryId = params.get('category');
 
       if (categoryId) {
         dispatch(resetCategories());
@@ -77,7 +74,6 @@ function RecipeList() {
     update();
   }, [location]);
 
-  console.log(categoryChecked);
   return (
     <div className="mt-16 mb-32 font-inter">
       <div className="mb-14">
@@ -87,7 +83,7 @@ function RecipeList() {
       </div>
       <BlogSearchBox
         searchHandler={searchHandler}
-        placeholder={"search for recipes"}
+        placeholder={'search for recipes'}
       />
       <div className="flex gap-8 flex-col lg:flex-row">
         <div className="basis-[20%]">

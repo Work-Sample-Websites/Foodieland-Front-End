@@ -40,7 +40,7 @@ function CarouselCard({
       <div className="hidden md:block basis-1/2 bg-lameBlue p-5 sm:p-7 lg:p-9">
         <div className="bg-white w-32 lg:w-36 rounded-2xl p-2 text-center">
           <img
-            src="https://firebasestorage.googleapis.com/v0/b/foodieland-3b1ed.appspot.com/o/others%2Fimage%2014.png?alt=media&token=089dd2c8-d3f3-4558-ad20-362bfdc9a646"
+            src="./images/image%2014.png"
             alt="hot-recipes"
             className="inline-block w-1/5 "
           />

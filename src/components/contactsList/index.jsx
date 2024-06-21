@@ -1,10 +1,10 @@
-import { useState } from "react";
-import ContactHeader from "./components/contactHeader";
-import ContactItem from "./components/contactItem";
-import ContactTitle from "./components/contactTitle";
-import { icons } from "../../services/utils/icons";
-import { contacts } from "../../services/utils/data";
-import "./contacts-list.css";
+import { useState } from 'react';
+import { contacts } from '../../services/utils/data';
+import { icons } from '../../services/utils/icons';
+import ContactHeader from './components/contactHeader';
+import ContactItem from './components/contactItem';
+import ContactTitle from './components/contactTitle';
+import './contacts-list.css';
 
 function ContactsList() {
   const [FormData, setFormData] = useState(contacts);

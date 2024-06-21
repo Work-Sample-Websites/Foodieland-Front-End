@@ -1,7 +1,7 @@
-import React from "react";
-import { directionsData } from "../../services/utils/data";
-import "./directions.css";
-import DirectionCard from "./directionCard";
+import React from 'react';
+import { directionsData } from '../../services/utils/data';
+import DirectionCard from './directionCard';
+import './directions.css';
 function Directions() {
   return (
     <section className="my-16 md:my-24 flex w-11/12 mx-auto xl:w-full font-inter">
@@ -20,7 +20,7 @@ function Directions() {
                 imageUrl={imageUrl}
                 imageDesc={imageDesc}
               />
-            )
+            ),
           )}
         </div>
       </div>

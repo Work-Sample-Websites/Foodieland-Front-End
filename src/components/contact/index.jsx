@@ -56,16 +56,6 @@ const Contact = (props) => {
       setSubmitError(true);
       return;
     }
-
-    const formData = {
-      name: inputValue.name.value,
-      email: inputValue.email.value,
-      message: inputValue.message.value,
-      subject: inputValue.subject.value,
-      category: selectValue.category.value,
-    };
-
-    console.log(formData);
   };
 
   return (
@@ -77,7 +67,7 @@ const Contact = (props) => {
       </div>
       <div className="flex flex-col lg:grid lg:grid-cols-3 mb-44">
         <img
-          src="https://firebasestorage.googleapis.com/v0/b/foodieland-3b1ed.appspot.com/o/cooker%2FCook-contact.png?alt=media&token=6d41b736-1b6c-4929-9b2e-fd6319ebfa2b"
+          src="./images/cooker/Cook-contact.png"
           alt="Cook"
           className="mb-16 justify-self-center self-center lg:h-5/6 ml-3"
         />

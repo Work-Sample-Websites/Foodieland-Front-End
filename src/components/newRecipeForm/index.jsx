@@ -1,25 +1,25 @@
-import { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { v4 as uuidv4 } from "uuid";
-import axios from "axios";
-import { fetchRecipes } from "../../features/recipe/recipeSlice";
-import { useNavigate } from "react-router-dom";
-import { chefsData } from "../../services/utils/data";
-import Spinner from "../login/components/spinner";
-import UploadMedia from "./uploadMedia";
+import axios from 'axios';
+import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import { v4 as uuidv4 } from 'uuid';
+import { fetchRecipes } from '../../features/recipe/recipeSlice';
+import { chefsData } from '../../services/utils/data';
+import Spinner from '../login/components/spinner';
+import UploadMedia from './uploadMedia';
 
 function NewRecipeForm() {
   const { recipes } = useSelector((state) => state.recipes);
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const [title, setTitle] = useState("");
-  const [description, setDescription] = useState("");
-  const [uploadPoster, setUploadPoster] = useState("");
-  const [uploadVideo, setUploadVideo] = useState("");
+  const [title, setTitle] = useState('');
+  const [description, setDescription] = useState('');
+  const [uploadPoster, setUploadPoster] = useState('');
+  const [uploadVideo, setUploadVideo] = useState('');
   const [cookTime, setCookTime] = useState(0);
   const [prepTime, setPrepTime] = useState(0);
-  const [selectedChef, setSelectedChef] = useState("Marcellus H. Waddell");
-  const [selectedCategory, setSelectedCategory] = useState("");
+  const [selectedChef, setSelectedChef] = useState('Marcellus H. Waddell');
+  const [selectedCategory, setSelectedCategory] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
   async function submitHandler(event) {
@@ -27,7 +27,7 @@ function NewRecipeForm() {
 
     setIsLoading(true);
     const [selectedChefData] = chefsData.filter(
-      (item) => item.name === selectedChef
+      (item) => item.name === selectedChef,
     );
 
     const recipe = {
@@ -39,16 +39,16 @@ function NewRecipeForm() {
       cook_time: cookTime,
       prep_time: prepTime,
       chef: selectedChef,
-      banner: "",
+      banner: '',
       chefImg: selectedChefData.imageUrl,
       category: selectedCategory,
       uploadDate: new Date().toISOString(),
       nutrition: {
-        calories: "219 kcal",
-        total_fat: "10.7 g",
-        protein: "7.9 g",
-        carbohydrate: "22.3 g",
-        cholesterol: "37.4 mg",
+        calories: '219 kcal',
+        total_fat: '10.7 g',
+        protein: '7.9 g',
+        carbohydrate: '22.3 g',
+        cholesterol: '37.4 mg',
       },
       liked: 0,
       comments: [],
@@ -58,16 +58,15 @@ function NewRecipeForm() {
     newRecipes.push(recipe);
     try {
       const { data } = await axios.put(
-        "https://foodieland-3b1ed-default-rtdb.firebaseio.com/recipes.json",
-        JSON.stringify(newRecipes)
+        'http://localhost:3001/recipes.json',
+        JSON.stringify(newRecipes),
       );
       setIsLoading(false);
 
       dispatch(fetchRecipes(data));
-      navigate("/", { replace: true });
+      navigate('/', { replace: true });
     } catch (error) {
       setIsLoading(false);
-      console.log(error);
     }
   }
 
@@ -121,7 +120,7 @@ function NewRecipeForm() {
               min={0}
               className=" border border-gray-500  rounded-2xl py-2 px-6"
               onChange={(e) => setPrepTime(e.target.value)}
-            />{" "}
+            />{' '}
           </div>
         </div>
         <div className="flex justify-between flex-wrap">
@@ -165,7 +164,7 @@ function NewRecipeForm() {
             type="submit"
             className="bg-mainBlue hover:bg-darkerBlue text-white py-2 basis-full md:basis-[14%] rounded-xl cursor-pointer mr-2 w-full sm:w-auto"
           >
-            {isLoading ? <Spinner /> : "Submit"}
+            {isLoading ? <Spinner /> : 'Submit'}
           </button>
         </div>
       </form>

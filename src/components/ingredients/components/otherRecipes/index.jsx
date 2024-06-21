@@ -1,4 +1,4 @@
-import OtherRecipeCard from "./otherRecipeCard";
+import OtherRecipeCard from './otherRecipeCard';
 
 function OtherRecipes({ RecipeData, number, title }) {
   let len = Math.ceil(Math.random() * RecipeData.length);
@@ -28,12 +28,12 @@ function OtherRecipes({ RecipeData, number, title }) {
           Don’t forget to eat healthy food
         </p>
         <img
-          src="https://firebasestorage.googleapis.com/v0/b/foodieland-3b1ed.appspot.com/o/others%2FStar-1.png?alt=media&token=0102d12b-4979-44a8-935e-4a77a4ae9e1f"
+          src="./Star-1.png"
           alt="star"
           className="w-full"
         />
         <img
-          src="https://firebasestorage.googleapis.com/v0/b/foodieland-3b1ed.appspot.com/o/others%2Ffood-21.png?alt=media&token=34db4470-fd11-4a69-aee7-74db142b94a7"
+          src="./food-21.png"
           alt="chicken"
           className="absolute top-16 xl:top-20 xl:left-8 2xl:top-28 2xl:left-16 z-10"
         />
